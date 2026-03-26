@@ -22,7 +22,7 @@ class TestCustomer(unittest.TestCase):
             db.session.add(self.customer1)
             db.session.add(self.customer2)
             db.session.commit()
-        self.token = encode_token(1)
+        self.token = encode_token(1, "customer")
         self.client = self.app.test_client()
         
     ############################################################################
