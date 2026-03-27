@@ -231,7 +231,7 @@ Traceback (most recent call last):
     )
 sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
 [SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
-[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+[parameters: [{'service_date': '1976-10-12', 'VIN': 'ABC', 'customers_id': 1, 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'VIN': 'DEF', 'customers_id': 2, 'service_desc': 'more stuff'}]]
 
 ======================================================================
 ERROR: test_add_remove_part (test_service_tickets.TestServiceTickets.test_add_remove_part)
@@ -354,7 +354,7 @@ Traceback (most recent call last):
     )
 sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
 [SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
-[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+[parameters: [{'service_date': '1976-10-12', 'VIN': 'ABC', 'customers_id': 1, 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'VIN': 'DEF', 'customers_id': 2, 'service_desc': 'more stuff'}]]
 
 ======================================================================
 ERROR: test_create_service_ticket (test_service_tickets.TestServiceTickets.test_create_service_ticket)
@@ -477,7 +477,7 @@ Traceback (most recent call last):
     )
 sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
 [SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
-[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+[parameters: [{'service_date': '1976-10-12', 'VIN': 'ABC', 'customers_id': 1, 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'VIN': 'DEF', 'customers_id': 2, 'service_desc': 'more stuff'}]]
 
 ======================================================================
 ERROR: test_get_my_tickets (test_service_tickets.TestServiceTickets.test_get_my_tickets)
@@ -600,7 +600,7 @@ Traceback (most recent call last):
     )
 sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
 [SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
-[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+[parameters: [{'service_date': '1976-10-12', 'VIN': 'ABC', 'customers_id': 1, 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'VIN': 'DEF', 'customers_id': 2, 'service_desc': 'more stuff'}]]
 
 ======================================================================
 ERROR: test_get_service_tickets (test_service_tickets.TestServiceTickets.test_get_service_tickets)
@@ -723,7 +723,7 @@ Traceback (most recent call last):
     )
 sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
 [SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
-[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+[parameters: [{'service_date': '1976-10-12', 'VIN': 'ABC', 'customers_id': 1, 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'VIN': 'DEF', 'customers_id': 2, 'service_desc': 'more stuff'}]]
 
 ======================================================================
 ERROR: test_invalid_service_ticket (test_service_tickets.TestServiceTickets.test_invalid_service_ticket)
@@ -846,7 +846,7 @@ Traceback (most recent call last):
     )
 sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
 [SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
-[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+[parameters: [{'service_date': '1976-10-12', 'VIN': 'ABC', 'customers_id': 1, 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'VIN': 'DEF', 'customers_id': 2, 'service_desc': 'more stuff'}]]
 
 ======================================================================
 ERROR: test_remove_mechanic (test_service_tickets.TestServiceTickets.test_remove_mechanic)
@@ -969,7 +969,7 @@ Traceback (most recent call last):
     )
 sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
 [SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
-[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+[parameters: [{'service_date': '1976-10-12', 'VIN': 'ABC', 'customers_id': 1, 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'VIN': 'DEF', 'customers_id': 2, 'service_desc': 'more stuff'}]]
 
 ======================================================================
 ERROR: test_update_mechanic (test_service_tickets.TestServiceTickets.test_update_mechanic)
@@ -1092,7 +1092,7 @@ Traceback (most recent call last):
     )
 sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
 [SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
-[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+[parameters: [{'service_date': '1976-10-12', 'VIN': 'ABC', 'customers_id': 1, 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'VIN': 'DEF', 'customers_id': 2, 'service_desc': 'more stuff'}]]
 
 ======================================================================
 FAIL: test_invalid_login (test_customer.TestCustomer.test_invalid_login)
@@ -1113,6 +1113,6 @@ Traceback (most recent call last):
 AssertionError: 2 != 3
 
 ----------------------------------------------------------------------
-Ran 25 tests in 0.622s
+Ran 25 tests in 0.811s
 
 FAILED (failures=2, errors=18)
