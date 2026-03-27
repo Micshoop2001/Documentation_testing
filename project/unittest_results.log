@@ -1,0 +1,1118 @@
+test_create_customer (test_customer.TestCustomer.test_create_customer) ... ERROR
+test_delete_customer (test_customer.TestCustomer.test_delete_customer) ... ERROR
+test_delete_login_customer (test_customer.TestCustomer.test_delete_login_customer) ... ERROR
+test_get_customer (test_customer.TestCustomer.test_get_customer) ... ok
+test_invalid_creation (test_customer.TestCustomer.test_invalid_creation) ... ok
+test_invalid_login (test_customer.TestCustomer.test_invalid_login) ... FAIL
+test_login_customer (test_customer.TestCustomer.test_login_customer) ... ok
+test_update_customer (test_customer.TestCustomer.test_update_customer) ... ERROR
+test_create_inventory (test_inventory.TestInventory.test_create_inventory) ... ERROR
+test_delete_inventory (test_inventory.TestInventory.test_delete_inventory) ... ERROR
+test_get_inventory (test_inventory.TestInventory.test_get_inventory) ... ok
+test_update_inventory (test_inventory.TestInventory.test_update_inventory) ... ERROR
+test_create_mechanic (test_mechanics.TestMechanics.test_create_mechanic) ... ERROR
+test_delete_mechanic (test_mechanics.TestMechanics.test_delete_mechanic) ... ERROR
+test_get_mechanic (test_mechanics.TestMechanics.test_get_mechanic) ... ok
+test_get_most_active_mechanic (test_mechanics.TestMechanics.test_get_most_active_mechanic) ... FAIL
+test_update_mechanic (test_mechanics.TestMechanics.test_update_mechanic) ... ERROR
+test_add_remove_mechanic (test_service_tickets.TestServiceTickets.test_add_remove_mechanic) ... ERROR
+test_add_remove_part (test_service_tickets.TestServiceTickets.test_add_remove_part) ... ERROR
+test_create_service_ticket (test_service_tickets.TestServiceTickets.test_create_service_ticket) ... ERROR
+test_get_my_tickets (test_service_tickets.TestServiceTickets.test_get_my_tickets) ... ERROR
+test_get_service_tickets (test_service_tickets.TestServiceTickets.test_get_service_tickets) ... ERROR
+test_invalid_service_ticket (test_service_tickets.TestServiceTickets.test_invalid_service_ticket) ... ERROR
+test_remove_mechanic (test_service_tickets.TestServiceTickets.test_remove_mechanic) ... ERROR
+test_update_mechanic (test_service_tickets.TestServiceTickets.test_update_mechanic) ... ERROR
+
+======================================================================
+ERROR: test_create_customer (test_customer.TestCustomer.test_create_customer)
+----------------------------------------------------------------------
+TypeError: TestCustomer.test_create_customer() missing 1 required positional argument: 'customer_id'
+
+======================================================================
+ERROR: test_delete_customer (test_customer.TestCustomer.test_delete_customer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_customer.py", line 116, in test_delete_customer
+    headers = {'Authorization': "Bearer " + self.login_helper()}
+                                            ~~~~~~~~~~~~~~~~~^^
+TypeError: TestCustomer.login_helper() missing 1 required positional argument: 'customer_id'
+
+======================================================================
+ERROR: test_delete_login_customer (test_customer.TestCustomer.test_delete_login_customer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_customer.py", line 125, in test_delete_login_customer
+    headers = {'Authorization': "Bearer " + self.login_helper()}
+                                            ~~~~~~~~~~~~~~~~~^^
+TypeError: TestCustomer.login_helper() missing 1 required positional argument: 'customer_id'
+
+======================================================================
+ERROR: test_update_customer (test_customer.TestCustomer.test_update_customer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_customer.py", line 106, in test_update_customer
+    headers = {'Authorization': "Bearer " + self.login_helper()}
+                                            ~~~~~~~~~~~~~~~~~^^
+TypeError: TestCustomer.login_helper() missing 1 required positional argument: 'customer_id'
+
+======================================================================
+ERROR: test_create_inventory (test_inventory.TestInventory.test_create_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_inventory.py", line 33, in test_create_inventory
+    headers = {'Authorization': "Bearer " + self.test_login_customer()}
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TestInventory' object has no attribute 'test_login_customer'
+
+======================================================================
+ERROR: test_delete_inventory (test_inventory.TestInventory.test_delete_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_inventory.py", line 61, in test_delete_inventory
+    headers = {'Authorization': "Bearer " + self.test_login_customer()}
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TestInventory' object has no attribute 'test_login_customer'
+
+======================================================================
+ERROR: test_update_inventory (test_inventory.TestInventory.test_update_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_inventory.py", line 51, in test_update_inventory
+    headers = {'Authorization': "Bearer " + self.test_login_customer()}
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TestInventory' object has no attribute 'test_login_customer'
+
+======================================================================
+ERROR: test_create_mechanic (test_mechanics.TestMechanics.test_create_mechanic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_mechanics.py", line 33, in test_create_mechanic
+    headers = {'Authorization': "Bearer " + self.test_login_customer()}
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TestMechanics' object has no attribute 'test_login_customer'
+
+======================================================================
+ERROR: test_delete_mechanic (test_mechanics.TestMechanics.test_delete_mechanic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_mechanics.py", line 79, in test_delete_mechanic
+    headers = {'Authorization': "Bearer " + self.test_login_customer()}
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TestMechanics' object has no attribute 'test_login_customer'
+
+======================================================================
+ERROR: test_update_mechanic (test_mechanics.TestMechanics.test_update_mechanic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_mechanics.py", line 58, in test_update_mechanic
+    headers = {'Authorization': "Bearer " + self.test_login_customer()}
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TestMechanics' object has no attribute 'test_login_customer'
+
+======================================================================
+ERROR: test_add_remove_mechanic (test_service_tickets.TestServiceTickets.test_add_remove_mechanic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: SQLite Date type only accepts Python date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_service_tickets.py", line 20, in setUp
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1143, in _emit_insert_statements
+    result = connection.execute(
+        statement, multiparams, execution_options=execution_options
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str(statement), parameters, None, None
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
+[SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
+[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+
+======================================================================
+ERROR: test_add_remove_part (test_service_tickets.TestServiceTickets.test_add_remove_part)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: SQLite Date type only accepts Python date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_service_tickets.py", line 20, in setUp
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1143, in _emit_insert_statements
+    result = connection.execute(
+        statement, multiparams, execution_options=execution_options
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str(statement), parameters, None, None
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
+[SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
+[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+
+======================================================================
+ERROR: test_create_service_ticket (test_service_tickets.TestServiceTickets.test_create_service_ticket)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: SQLite Date type only accepts Python date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_service_tickets.py", line 20, in setUp
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1143, in _emit_insert_statements
+    result = connection.execute(
+        statement, multiparams, execution_options=execution_options
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str(statement), parameters, None, None
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
+[SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
+[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+
+======================================================================
+ERROR: test_get_my_tickets (test_service_tickets.TestServiceTickets.test_get_my_tickets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: SQLite Date type only accepts Python date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_service_tickets.py", line 20, in setUp
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1143, in _emit_insert_statements
+    result = connection.execute(
+        statement, multiparams, execution_options=execution_options
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str(statement), parameters, None, None
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
+[SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
+[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+
+======================================================================
+ERROR: test_get_service_tickets (test_service_tickets.TestServiceTickets.test_get_service_tickets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: SQLite Date type only accepts Python date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_service_tickets.py", line 20, in setUp
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1143, in _emit_insert_statements
+    result = connection.execute(
+        statement, multiparams, execution_options=execution_options
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str(statement), parameters, None, None
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
+[SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
+[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+
+======================================================================
+ERROR: test_invalid_service_ticket (test_service_tickets.TestServiceTickets.test_invalid_service_ticket)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: SQLite Date type only accepts Python date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_service_tickets.py", line 20, in setUp
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1143, in _emit_insert_statements
+    result = connection.execute(
+        statement, multiparams, execution_options=execution_options
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str(statement), parameters, None, None
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
+[SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
+[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+
+======================================================================
+ERROR: test_remove_mechanic (test_service_tickets.TestServiceTickets.test_remove_mechanic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: SQLite Date type only accepts Python date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_service_tickets.py", line 20, in setUp
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1143, in _emit_insert_statements
+    result = connection.execute(
+        statement, multiparams, execution_options=execution_options
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str(statement), parameters, None, None
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
+[SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
+[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+
+======================================================================
+ERROR: test_update_mechanic (test_service_tickets.TestServiceTickets.test_update_mechanic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: SQLite Date type only accepts Python date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_service_tickets.py", line 20, in setUp
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1143, in _emit_insert_statements
+    result = connection.execute(
+        statement, multiparams, execution_options=execution_options
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str(statement), parameters, None, None
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+        dialect, self, conn, execution_options, *args, **kw
+    )
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1287, in process
+    raise TypeError(
+    ...<2 lines>...
+    )
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
+[SQL: INSERT INTO service_tickets (service_date, "VIN", service_desc, customers_id) VALUES (?, ?, ?, ?) RETURNING id]
+[parameters: [{'service_date': '1976-10-12', 'customers_id': 1, 'VIN': 'ABC', 'service_desc': 'stuff stuff stuff'}, {'service_date': '1990-10-12', 'customers_id': 2, 'VIN': 'DEF', 'service_desc': 'more stuff'}]]
+
+======================================================================
+FAIL: test_invalid_login (test_customer.TestCustomer.test_invalid_login)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_customer.py", line 93, in test_invalid_login
+    self.assertEqual(response.status_code, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 401 != 400
+
+======================================================================
+FAIL: test_get_most_active_mechanic (test_mechanics.TestMechanics.test_get_most_active_mechanic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Coding_Temple\Backend_specialization\Module2\Documentation_Testing\project\tests\test_mechanics.py", line 71, in test_get_most_active_mechanic
+    self.assertEqual(len(response.json), 3)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 3
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.622s
+
+FAILED (failures=2, errors=18)

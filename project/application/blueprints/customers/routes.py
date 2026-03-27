@@ -44,7 +44,7 @@ def delete_customer_token(user_id): #Recieving user_id from the token
 #POST '/' : Creates a new Customer
 @customers_bp.route('/', methods=['POST']) #test
 @limiter.limit("15 per day")
-@token_required
+
 def create_customer():
     try:
         customer = customer_schema.load(request.json)

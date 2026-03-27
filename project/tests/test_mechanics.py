@@ -20,6 +20,14 @@ class TestMechanics(unittest.TestCase):
         self.client = self.app.test_client()   
         
     ############################################################################
+    def login_helper(self):
+        credentials = {
+            "email": "test@email.com",
+            "password": "test"
+        }
+        response = self.client.post('/customers/login', json=credentials)
+        return response.json['auth_token']
+    ############################################################################
     
     def test_create_mechanic(self): #Post new mechanic
         headers = {'Authorization': "Bearer " + self.test_login_customer()}

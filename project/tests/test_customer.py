@@ -26,7 +26,7 @@ class TestCustomer(unittest.TestCase):
         self.client = self.app.test_client()
         
     ############################################################################
-    def login_helper(self):
+    def login_helper(self, customer_id):
         credentials = {
             "email": "test@email.com",
             "password": "test"
@@ -35,7 +35,7 @@ class TestCustomer(unittest.TestCase):
         return response.json['auth_token']
     ############################################################################
     
-    def test_create_customer(self): #Post new customer
+    def test_create_customer(self, customer_id): #Post new customer
         headers = {'Authorization': "Bearer " + self.login_helper()}
         customer_payload = {
             "name": "John Doe",
