@@ -22,7 +22,7 @@ class TestCustomer(unittest.TestCase):
             db.session.add(self.customer1)
             db.session.add(self.customer2)
             db.session.commit()
-        self.token = encode_token(1, "customer")
+        self.token = encode_token(1)
         self.client = self.app.test_client()
         
     ############################################################################
@@ -117,7 +117,7 @@ class TestCustomer(unittest.TestCase):
 
         response = self.client.delete('/customers/2', headers=headers)
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['message'], 'successfully deleted user 2')
+        self.assertEqual(response.json['message'], "successfully deleted customer 2")
         
     ############################################################################
     
@@ -126,7 +126,7 @@ class TestCustomer(unittest.TestCase):
 
         response = self.client.delete('/customers/login', headers=headers)
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['message'], 'successfully deleted user 1')
+        self.assertEqual(response.json['message'], 'successfully deleted customer 1')
         
     ############################################################################
     

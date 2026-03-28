@@ -26,7 +26,7 @@ class TestCustomer(unittest.TestCase):
         self.client = self.app.test_client()
         
     ############################################################################
-    def login_helper(self, customer_id):
+    def login_helper(self):
         credentials = {
             "email": "test@email.com",
             "password": "test"
@@ -35,7 +35,7 @@ class TestCustomer(unittest.TestCase):
         return response.json['auth_token']
     ############################################################################
     
-    def test_create_customer(self, customer_id): #Post new customer
+    def test_create_customer(self): #Post new customer
         headers = {'Authorization': "Bearer " + self.login_helper()}
         customer_payload = {
             "name": "John Doe",
@@ -90,7 +90,7 @@ class TestCustomer(unittest.TestCase):
         }
 
         response = self.client.post('/customers/login', json=credentials)
-        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.status_code, 401)
         self.assertEqual(response.json['messages'], 'Invalid email or password')
     
     ############################################################################
@@ -117,7 +117,7 @@ class TestCustomer(unittest.TestCase):
 
         response = self.client.delete('/customers/2', headers=headers)
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['message'], 'successfully deleted user 2')
+        self.assertEqual(response.json['message'], "successfully deleted customer 2")
         
     ############################################################################
     
@@ -126,7 +126,7 @@ class TestCustomer(unittest.TestCase):
 
         response = self.client.delete('/customers/login', headers=headers)
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['message'], 'successfully deleted user 1')
+        self.assertEqual(response.json['message'], 'successfully deleted customer 1')
         
     ############################################################################
     

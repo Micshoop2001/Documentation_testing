@@ -36,7 +36,7 @@ def token_required(f):
              return jsonify({'message': 'Token has expired!'}), 401
         except jose.exceptions.JWTError:
              return jsonify({'message': 'Invalid token!'}), 401
-
-        return f(customer_id, *args, **kwargs)
+        kwargs['user_id'] = int(customer_id)
+        return f(*args, **kwargs)
 
     return decorated
