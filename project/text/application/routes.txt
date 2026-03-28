@@ -82,7 +82,7 @@ def get_customers():
 @customers_bp.route('/<int:customer_id>', methods=['PUT']) #test
 @limiter.limit("50/day")
 @token_required
-def update_customer(customer_id):
+def update_customer(customer_id, user_id):
     customer = db.session.get(Customers, customer_id)
 
     if not customer:
@@ -103,12 +103,12 @@ def update_customer(customer_id):
 @customers_bp.route('/<int:customer_id>', methods=['DELETE']) #test
 @limiter.limit("50/day")
 @token_required
-def delete_customer(customer_id):
+def delete_customer(customer_id, user_id):
     customer = db.session.get(Customers, customer_id)
     if not customer:
         return jsonify({"message": "customer id not found"}), 404 
     db.session.delete(customer)
     db.session.commit()
-    return jsonify({"message": f"successfully deleted customer {customer_id}"}), 200
+    return jsonify({"message": f"successfully deleted user {user_id}"}), 200
 
 

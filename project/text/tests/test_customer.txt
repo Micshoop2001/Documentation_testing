@@ -90,7 +90,7 @@ class TestCustomer(unittest.TestCase):
         }
 
         response = self.client.post('/customers/login', json=credentials)
-        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.status_code, 401)
         self.assertEqual(response.json['messages'], 'Invalid email or password')
     
     ############################################################################
