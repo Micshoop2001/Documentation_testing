@@ -98,9 +98,9 @@ class TestCustomer(unittest.TestCase):
     def test_update_customer(self): #test PUT updating customer info
         update_payload = {
             "name": "Peter",
-            "phone": "",
-            "email": "",
-            "password": ""
+            "phone": 2222222,
+            "email": "peter@email.com",
+            "password": "newpassword"
         }
 
         headers = {'Authorization': "Bearer " + self.login_helper()}

@@ -99,7 +99,7 @@ class TestCustomer(unittest.TestCase):
         update_payload = {
             "name": "Peter",
             "phone": 2222222,
-            "email": "peter@email.com",
+            "email": "test@email.com",
             "password": "newpassword"
         }
 
