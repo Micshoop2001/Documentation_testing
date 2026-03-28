@@ -39,7 +39,8 @@ def delete_customer_token(user_id): #Recieving user_id from the token
     customer = db.session.execute(query).scalars().first()
     db.session.delete(customer)
     db.session.commit()
-    return jsonify({"message": f"succesfully deleted user {user_id}"})
+    return jsonify({"message": f"successfully deleted customer {user_id}"}), 200
+
 
 #POST '/' : Creates a new Customer
 @customers_bp.route('/', methods=['POST']) #test
@@ -109,6 +110,6 @@ def delete_customer(customer_id, user_id):
         return jsonify({"message": "customer id not found"}), 404 
     db.session.delete(customer)
     db.session.commit()
-    return jsonify({"message": f"successfully deleted user {user_id}"}), 200
+    return jsonify({"message": f"successfully deleted customer {customer_id}"}), 200
 
 
