@@ -20,17 +20,9 @@ class TestInventory(unittest.TestCase):
         self.client = self.app.test_client()
     
     ############################################################################
-    def login_helper(self):
-        credentials = {
-            "email": "test@email.com",
-            "password": "test"
-        }
-        response = self.client.post('/customers/login', json=credentials)
-        return response.json['auth_token']
-    ############################################################################
     
     def test_create_inventory(self): #Post new inventory item
-        headers = {'Authorization': "Bearer " + self.test_login_customer()}
+        headers = {'Authorization': f"Bearer {self.token}"}
         inventory_payload = {"name": "test_part3", "price": 300.00}
         response = self.client.post('/inventory/', json=inventory_payload, headers=headers)
         self.assertEqual(response.status_code, 201)
@@ -48,7 +40,7 @@ class TestInventory(unittest.TestCase):
     
     def test_update_inventory(self): #test PUT updating inventory info
         update_payload = {"name": "wheel", "price": 150.00}
-        headers = {'Authorization': "Bearer " + self.test_login_customer()}
+        headers = {'Authorization': f"Bearer {self.token}"}
 
         response = self.client.put('/inventory/1', json=update_payload, headers=headers)
         self.assertEqual(response.status_code, 200)
@@ -58,7 +50,7 @@ class TestInventory(unittest.TestCase):
     ############################################################################
     
     def test_delete_inventory(self):
-        headers = {'Authorization': "Bearer " + self.test_login_customer()}
+        headers = {'Authorization': f"Bearer {self.token}"}
 
         response = self.client.delete('/inventory/2', headers=headers)
         self.assertEqual(response.status_code, 200)

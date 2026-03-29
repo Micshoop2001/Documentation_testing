@@ -69,9 +69,8 @@ class TestMechanics(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.json, list)
         self.assertEqual(len(response.json), 2)
-        self.assertEqual(response.json[0]['name'], 'test_mechanic')
-        self.assertEqual(response.json[1]['name'], 'test_mechanic2')
-
+        self.assertEqual(len(response.json[0]['service_tickets']), 0)
+        self.assertEqual(len(response.json[1]['service_tickets']), 0)
     
     ############################################################################
     

@@ -12,7 +12,7 @@ from . import inventory_bp
 @inventory_bp.route('/', methods=['POST']) #test
 @limiter.limit("10/day")
 @token_required
-def create_inventory(id):
+def create_inventory(user_id):
     try:
         inventory = inventory_schema.load(request.json)
     except ValidationError as e:
@@ -26,7 +26,7 @@ def create_inventory(id):
 
     return inventory_schema.jsonify(new_inventory), 201    
  
-  
+####################################################################################  
 #GET '/': Retrieves all Inventory with pagination
 @inventory_bp.route("/", methods=['GET']) #test
 @limiter.limit("100/hour")
@@ -43,12 +43,12 @@ def get_inventory():
 
     return inventories_schema.jsonify(inventory)
 
-
+#################################################################################### 
 #PUT '/<int:id>': Updates a specific Inventory based on the id passed in through the url.
 @inventory_bp.route('/<int:id>', methods=['PUT']) #test
 @limiter.limit("100/day")
 @token_required
-def update_inventory(cust_id, id):
+def update_inventory(user_id, id):
     inventory = db.session.get(Inventory, id)
 
     if not inventory:
@@ -63,12 +63,12 @@ def update_inventory(cust_id, id):
 
     db.session.commit()
     return inventory_schema.jsonify(inventory), 200
-
+#################################################################################### 
 #DELETE '/<int:id': Deletes a specific Inventory based on the id passed in through the url.
 @inventory_bp.route('/<int:id>', methods=['DELETE']) #test
 @limiter.limit("100/day")
 @token_required
-def delete_inventory(id):
+def delete_inventory(user_id, id):
     inventory = db.session.get(Inventory, id)
     if not inventory:
         return jsonify({"message": "inventory id not found"}), 404 

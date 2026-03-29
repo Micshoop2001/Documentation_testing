@@ -18,7 +18,7 @@ class Service_ticketsSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Service_tickets
         include_fk = True
-        load_instance = True
+        load_instance = False
 
 class Edit_Service_ticketsSchema(ma.Schema):
     additional_mechanic_id = ma.List(ma.Integer(), required=False)

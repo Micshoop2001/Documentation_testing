@@ -12,7 +12,7 @@ from . import mechanics_bp
 @mechanics_bp.route('/', methods=['POST']) #test
 @limiter.limit("50/day")
 @token_required
-def create_mechanic():
+def create_mechanic(user_id=None):
     try:
         mechanic_data = mechanic_schema.load(request.json)
     except ValidationError as e:
@@ -26,7 +26,7 @@ def create_mechanic():
     db.session.commit()
 
     return mechanic_schema.jsonify(new_mechanic), 201    
- 
+#################################################################################### 
  #GET '/': Retrieves all Mechanics
 @mechanics_bp.route("/", methods=['GET']) #test
 @limiter.limit("100/hour")
@@ -36,12 +36,12 @@ def get_mechanics():
     mechanics = db.session.execute(query).scalars().all()
 
     return mechanics_schema.jsonify(mechanics)
-
+####################################################################################
 #PUT '/<int:id>':  Updates a specific Mechanic based on the id passed in through the url.
 @mechanics_bp.route('/<int:id>', methods=['PUT']) #test
 @limiter.limit("50/day")
 @token_required
-def update_mechanic(id):
+def update_mechanic(user_id, id):
     mechanic = db.session.get(Mechanics, id)
 
     if not mechanic:
@@ -58,12 +58,12 @@ def update_mechanic(id):
 
     db.session.commit()
     return mechanic_schema.jsonify(mechanic), 200
-
+####################################################################################
 #DELETE '/<int:id': Deletes a specific Mechanic based on the id passed in through the url.
 @mechanics_bp.route('/<int:id>', methods=['DELETE']) #test
 @limiter.limit("5/day")
 @token_required
-def delete_mechanic(id):
+def delete_mechanic(user_id, id):
     mechanic = db.session.get(Mechanics, id)
     if not mechanic:
         return jsonify({"message": "mechanic id not found"}), 404
@@ -71,7 +71,7 @@ def delete_mechanic(id):
     db.session.commit()
     return jsonify({"message": f"successfully deleted mechanic {id}"}), 200
 
-
+####################################################################################
 #Create an endpoint in mechanics blueprint that returns a list of mechanics in order of who has worked on the most tickets
 @mechanics_bp.route('/most-active', methods=['GET']) #test
 @limiter.limit("100/hour")

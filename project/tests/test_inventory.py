@@ -1,6 +1,5 @@
 from application.__init__ import create_app
 from application.models import db, Inventory
-from application.models import Customer
 #from datetime import datetime
 from application.utils.util import encode_token
 import unittest
