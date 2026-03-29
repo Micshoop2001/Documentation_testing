@@ -62,18 +62,17 @@ paths:
       parameters:
         - in: "body"
           name: "body"
-          description: "Information required to create a new Member."
+          description: "Information required to create a new Customer."
           required: true
           schema:
-            $ref: "#/definitions/CreateMemberPayload"
+            $ref: "#/definitions/CreateCustomerPayload"
       responses:
         201:
-          descriptions: "Successfull Member Creation"
+          descriptions: "Successfull Customer Creation"
           schema:
-            $ref: "#/definitions/CreateMemberResponse"
+            $ref: "#/definitions/CreateCustomerResponse"
           examples:
             application/json:
-              id: 1
               name: John Doe
               Phone: 5555555
               email: johnd@email.com
@@ -160,7 +159,6 @@ paths:
             $ref: "#/definitions/CreateInventoryResponse"
           examples:
             application/json:
-              id: 1
               name: Widget
               price: 19.99
     get:
@@ -233,6 +231,8 @@ paths:
         - mechanics
       summary: "Endpoint to create a new mechanic."
       description: "Endpoint to create a new mechanic in our system."
+      security:
+        - bearerAuth: []
       parameters:
         - in: "body"
           name: "body"
@@ -362,6 +362,15 @@ paths:
           description: "Retrieved Service Tickets Successfully"
           schema:
             $ref: "#/definitions/AllService_tickets"
+          examples:
+            application/json:
+              "VIN": "ABC432"
+              "customers_id": 1
+              "id": 6
+              "inventory": []
+              "mechanics": []
+              "service_date": "1976-10-12"
+              "service_desc": "stuff stuff stuff"
 
   ###############################################################################
   /service-tickets/{ticket_id}/assign-mechanic/{mechanic_id}:
@@ -370,6 +379,8 @@ paths:
         - service-tickets
       summary: "Endpoint to assign a mechanic to a service ticket."
       description: "Endpoint to assign a mechanic to a service ticket using their unique IDs. Requires token authentication."
+      security:
+        - bearerAuth: []
       parameters:
         - in: path
           name: ticket_id
@@ -394,6 +405,8 @@ paths:
         - service-tickets
       summary: "Endpoint to remove a mechanic from a service ticket."
       description: "Endpoint to remove a mechanic from a service ticket using their unique IDs. Requires token authentication."
+      security:
+        - bearerAuth: []
       parameters:
         - in: path
           name: ticket_id
@@ -424,6 +437,9 @@ paths:
           description: "Retrieved Service Tickets Successfully"
           schema:
             $ref: "#/definitions/AllService_tickets"
+          examples:
+            application/json:
+              "tickets": [1, 2, 3]
 
   ###############################################################################
   #Add an update route to your service_ticket blueprint to add and remove mechanics from a ticket.
@@ -601,8 +617,6 @@ definitions:
   CreateInventoryPayload:
     type: "object"
     properties:
-      id:
-        type: "integer"
       name:
         type: "string"
       price:
@@ -676,8 +690,6 @@ definitions:
   CreateMechanicPayload:
     type: "object"
     properties:
-      id:
-        type: "integer"
       name:
         type: "string"
       email:
@@ -690,7 +702,6 @@ definitions:
         format: float
 
     required:
-      - id
       - name
       - email
       - phone
@@ -798,8 +809,6 @@ definitions:
   CreateService_ticketsPayload:
     type: "object"
     properties:
-      id:
-        type: "integer"
       service_date:
         type: "date"
       VIN:
@@ -810,7 +819,6 @@ definitions:
         type: "Integer"
 
     required:
-      - id
       - service_date
       - VIN
       - service_desc
